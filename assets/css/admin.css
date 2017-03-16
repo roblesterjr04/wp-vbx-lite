@@ -1,0 +1,115 @@
+.vm-wrapper { overflow: hidden; height: 32px; border: 2px solid #eee; max-width: 300px }
+.vm-wrapper iframe { height: 62px; }
+.media-display { border: 2px solid #eee; display: none; margin-bottom: 10px; }
+.media-picker.image .media-display.image { display: block; padding: 5px; max-width: 50%; }
+.media-picker.audio .media-display.audio { display: block; }
+.media-picker.video .media-display.video { display: block; max-width: 50%; }
+.applets .remove-button, .applets .edit-button {display: none; }
+.flow .remove-button, .flow .edit-button {display: block; float: right; text-decoration: none;}
+.flow .remove-button span, .flow .edit-button span { font-size: 16px; }
+.flow { height: 42px; width: 300px; border: 1px dashed #ddd; background: #fbfbfb; }
+.flow .applet .menu-item-bar { margin: 0; z-index: 10; }
+.flow.set { border: 1px solid #eee; }
+.flow .menu-item-handle { cursor: pointer }
+.postbox.step-hidden { display: none; }
+#applet-flow { width: 50%; }
+.applet img { width: 15px; margin-bottom: -3px; }
+.applet span.dashicons { color: #707070; width: 25px; }
+.applet span.dashicons-trash { color: maroon }
+.postbox .applet-content > label, .postbox .applet-content div > label {
+	display: block;
+	border: 1px solid #eee;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.postbox .applet-content label h3 {
+	margin: 5px 0;
+}
+.postbox .applet-content input, .postbox .applet-content textarea {
+	margin: 10px 0;
+}
+.dropzone .backdrop {
+    position: relative;
+    top: -45px;
+    left: 102px;
+    width: 120px;
+    height: 0;
+    z-index: 0;
+}
+.ui-draggable-dragging {
+	z-index: 1000;
+	width: 270px;
+}
+.post-type-wp-vbx-numbers #advanced-sortables .toggle-indicator { display: none }
+.vbx-menu-options .dropzone {
+	float: right;
+}
+.applet-content .group-container {
+	background-color: #fbfbfb;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.group-container .collapse { display: none; }
+.menu_option_controls {
+	margin: 15px;
+	float: left;
+}
+.menu_option_controls a {
+	text-decoration: none;
+}
+span.index { display: none; }
+span.release a { color: orange; }
+span.release a:hover { color: darkorange; }
+/*.postbox
+#applet-Applet_Start-0 { display: block !important; }*/
+
+.message-thread {
+	border: 1px solid #eee;
+	padding: 15px;
+	max-height: 350px;
+	overflow-y: scroll;
+}
+.message-thread .message-row {
+	width: 100%;
+	clear: both;
+}
+.message-thread .message-row .message {
+	min-width: 250px;
+	max-width: 350px;
+	padding: 15px 10px;
+	margin-bottom: 15px;
+	border-radius: 15px;
+}
+.message-thread .message-row .message.media {
+	padding: 0;
+}
+.message-thread .message-row .message.out {
+	float: left;
+	background-color: #eee;
+}
+.message-thread .message-row .message.in {
+	background-color: #0c84f4;
+	float: right;
+	color: #fff;
+	text-align: right;
+}
+.message-thread .message-row .message p {
+	margin: 0;
+}
+.message-thread audio,
+.message-thread img,
+.message-thread video {
+	max-width: 100% !important;
+	padding: 0;
+	border: none;
+}
+#dashboard_right_now a.vbx-message-count:before {
+  content: "\f125";
+}
+#dashboard_right_now a.vbx-vm-count:before {
+  content: "\f482";
+}

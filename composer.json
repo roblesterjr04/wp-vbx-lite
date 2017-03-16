@@ -1,0 +1,15 @@
+{
+    "name": "rlester/wp-vbx-lite",
+    "description": "Wordpress VBX - Powered by Twilio",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Rob Lester",
+            "email": "robertlesterjr@mac.com"
+        }
+    ],
+    "require": {
+        "twilio/sdk": "5.5"
+    }
+}
