@@ -42,6 +42,8 @@ class WPRLVBX {
 		
 		self::$client = $this->register_client();
 		self::$twiml = new Twiml();
+		
+		do_action( 'wp-vbx-init' );
 				
 	}
 	
@@ -70,6 +72,8 @@ class WPRLVBX {
 			add_action('admin_notices', array($this, 'activate_twilio_notice'));
 			return false;
 		}
+		
+		do_action( 'wp-vbx-register-twilio' );
 	}
 	
 	/**
@@ -290,6 +294,7 @@ class WPRLVBX {
 		        $extends[$class] = $class;
 		    }
 	    }
+	    do_action( 'wp-vbx-get-applets', $extends );
 	    return $extends;
 	}
 	

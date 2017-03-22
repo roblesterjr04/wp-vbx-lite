@@ -51,19 +51,3 @@ function vbx_permalink($postid, $index) {
 function twilio() {
 	return WPRLVBX::$client;
 }
-
-function vbx_plugin_activate() {
-    $ssga = new WPRLVBX_ssga( 'UA-44501346-1', 'roblesterjr.com' );
-    
-    $ssga->set_event( 'Plugins', 'Activations', 'WP VBX' );
-	$ssga->send();	
-}
-register_activation_hook( __FILE__, 'vbx_plugin_activate');
-
-function vbx_plugin_deactivate() {
-	$ssga = new WPRLVBX_ssga( 'UA-44501346-1', 'roblesterjr.com' );
-    
-    $ssga->set_event( 'Plugins', 'Deactivations', 'WP VBX' );
-	$ssga->send();
-}
-register_deactivation_hook( __FILE__, 'vbx_plugin_deactivate' );

@@ -32,7 +32,7 @@ abstract class WPRLVBX_Applet {
 		$this->index = $index;
 		$this->instance = $this->instance();
 		$this->id = get_class($this);
-		foreach ($_POST as $key=>$val) {
+		foreach ($_REQUEST as $key=>$val) {
 			$this->request[$key] = $val;
 		}
 		
@@ -40,6 +40,7 @@ abstract class WPRLVBX_Applet {
 			$this->action = vbx_permalink($postid, get_class($this) . '-' .$index);
 		}
 		$this->twiml = apply_filters('wp-vbx-twiml', WPRLVBX::$twiml, $this);
+		do_action('wp-vbx-applet', $this);
 	}
 	
 	/**

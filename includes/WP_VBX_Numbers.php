@@ -59,6 +59,8 @@ class WPRLVBX_Numbers {
 			wp_delete_post( $postid, true);
 			
 			wp_redirect( admin_url('edit.php?post_type=' . $_GET['post_type'] ) );
+			
+			do_action( 'wp-vbx-release-number' );
 			exit;
 			
 		}
@@ -217,6 +219,8 @@ class WPRLVBX_Numbers {
 		</table>
 		
 		<?php
+			
+		do_action( 'wp-vbx-available-numbers-search' );
 			
 		echo apply_filters( 'wp-vbx-available-numbers-ajax-table', ob_get_clean(), $numbers, $search, $state, $client );
 		

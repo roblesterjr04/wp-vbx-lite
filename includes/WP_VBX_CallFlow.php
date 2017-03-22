@@ -122,6 +122,7 @@ class WPRLVBX_CallFlow {
 
 			if ($flow['this'] == $applet_name) {
 				$class_parts = explode('-', $flow['this']);
+				do_action( 'wp-vbx-get-applet-' . $applet_name );
 				return new $class_parts[0]($class_parts[1], $_GET['flow']);
 			}
 			
