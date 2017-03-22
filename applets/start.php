@@ -29,6 +29,9 @@ class WPRLVBX_Applet_Start extends WPRLVBX_Applet {
 		
 		$class_parts = explode('-', $class);
 		$app = new $class_parts[0]($class_parts[1], $this->post);
+		
+		do_action( 'wp-vbx-applet-run', 'next', $app );
+		
 		$app->twiml();
 		
 	}

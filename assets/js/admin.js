@@ -53,6 +53,7 @@ jQuery(function($) {
 	
 	$('body').on('click', '.flow .applet', function(event) {
 		event.preventDefault();
+		//$(this).parents('.postbox').find('.toggle-indicator').trigger('click');
 		var id = "#applet-" + $(this).attr('id');
 		$(id).slideToggle();
 	});

@@ -16,7 +16,7 @@ abstract class WPRLVBX_Applet {
 	
 	protected $post;
 	
-	protected $twiml;
+	public $twiml;
 	
 	/**
 	 * __construct function.
@@ -361,6 +361,8 @@ abstract class WPRLVBX_Applet {
 	 */
 	protected function run($name = 'next') {
 		
+		do_action( 'wp-vbx-applet-run', $name, $this );
+		
 		if (isset($this->instance[$name]) && $this->instance[$name] != '') {
 			$this->twiml->Redirect( vbx_permalink($_GET['flow'], $this->instance[$name]) );
 			$this->response();
@@ -406,7 +408,7 @@ abstract class WPRLVBX_Applet {
 	 * @access protected
 	 * @return void
 	 */
-	final protected function response() {
+	final public function response() {
 		
 		do_action( 'wp-vbx-applet-before-response', $this->twiml, $this );
 		echo $this->twiml;
