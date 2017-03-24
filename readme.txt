@@ -29,12 +29,13 @@ The plugin is extendable for developers as well! Developers can create plugins t
 = PRO Features: =
 * All Lite Features +
 * Sms Inbox + reply
-* Stripe Payments
 * Transfer
 * Conference
 * Timed attendant
-* Google Analytics
-
+* Hold Queue
+* Conditional Staff Flow
+* Call in voicemail
+* Language Prompt
 
 == Installation ==
 
