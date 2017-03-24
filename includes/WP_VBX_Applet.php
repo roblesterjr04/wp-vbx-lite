@@ -360,7 +360,7 @@ abstract class WPRLVBX_Applet {
 	 * @param mixed $name
 	 * @return void
 	 */
-	protected function run($name = 'next') {
+	final protected function run($name = 'next') {
 		
 		do_action( 'wp-vbx-applet-run', $name, $this );
 		
