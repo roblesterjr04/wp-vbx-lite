@@ -1,0 +1,315 @@
+# Copyright (C) 2017 WP VBX Phone System
+# This file is distributed under the same license as the WP VBX Phone System package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP VBX Phone System 0.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-vbx-lite\n"
+"POT-Creation-Date: 2017-03-24 15:31:56+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: applets/dial.php:26
+msgid "Dial a group, a user, or a number?"
+msgstr ""
+
+#: applets/dial.php:28
+msgid "User"
+msgstr ""
+
+#: applets/dial.php:36
+msgid "Group"
+msgstr ""
+
+#: applets/dial.php:44
+msgid "Number(s):"
+msgstr ""
+
+#: applets/dial.php:48
+msgid "If there's no answer..."
+msgstr ""
+
+#: applets/dial.php:51
+msgid "When the call is disconnected from the caller..."
+msgstr ""
+
+#: applets/greeting.php:12
+msgid "Speak something to the caller"
+msgstr ""
+
+#: applets/greeting.php:14
+msgid "After speaking, do..."
+msgstr ""
+
+#: applets/hangup.php:17
+msgid "Hangup the Phone."
+msgstr ""
+
+#: applets/menu.php:15
+msgid "Set Greeting..."
+msgstr ""
+
+#: applets/menu.php:28 applets/menu.php:38 applets/menu.php:43
+msgid "Keys:"
+msgstr ""
+
+#: applets/menu.php:52
+msgid "Set Invalid Message..."
+msgstr ""
+
+#: applets/menu.php:57
+msgid "Menu Timeout (seconds):"
+msgstr ""
+
+#: applets/start.php:14
+msgid "Start Here"
+msgstr ""
+
+#: applets/start.php:15
+msgid ""
+"Drop the first applet here that you want to execute when a caller dials in."
+msgstr ""
+
+#: applets/voicemail.php:10
+msgid "Assign to user"
+msgstr ""
+
+#: includes/WP_VBX.php:89
+msgid ""
+"Twilio is not activated. Please go to the settings page and update your API "
+"keys."
+msgstr ""
+
+#: includes/WP_VBX.php:99
+msgid ""
+"Twilio account is in trial mode. You must upgrade to a full account for the "
+"plugin to work."
+msgstr ""
+
+#: includes/WP_VBX.php:114
+msgid "WP VBX Device Number"
+msgstr ""
+
+#: includes/WP_VBX.php:163
+msgctxt "wp-vbx-voicemails"
+msgid "New"
+msgstr ""
+
+#: includes/WP_VBX.php:170
+msgid "New <span class=\"count\">(%s)</span>"
+msgid_plural "New <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/WP_VBX.php:178 includes/WP_VBX.php:179
+msgid "Voicemails"
+msgstr ""
+
+#: includes/WP_VBX.php:180
+msgid "Voicemail"
+msgstr ""
+
+#: includes/WP_VBX.php:181
+msgid "Listen to Voicemail"
+msgstr ""
+
+#: includes/WP_VBX.php:194
+msgid "Call Flows"
+msgstr ""
+
+#: includes/WP_VBX.php:195
+msgid "Call flow"
+msgstr ""
+
+#: includes/WP_VBX.php:196
+msgid "Add New Call flow"
+msgstr ""
+
+#: includes/WP_VBX.php:205
+msgid "Phone Numbers"
+msgstr ""
+
+#: includes/WP_VBX.php:206
+msgid "Phone Number"
+msgstr ""
+
+#: includes/WP_VBX.php:207
+msgid "Buy New Number"
+msgstr ""
+
+#: includes/WP_VBX.php:208
+msgid "Buy Number"
+msgstr ""
+
+#: includes/WP_VBX_Admin.php:91
+msgid "Twilio API Keys"
+msgstr ""
+
+#: includes/WP_VBX_Admin.php:98
+msgid "Twilio Account SID"
+msgstr ""
+
+#: includes/WP_VBX_Admin.php:106
+msgid "Twilio Secret KEY"
+msgstr ""
+
+#: includes/WP_VBX_Admin.php:114
+msgid "Import Existing Phone Numbers"
+msgstr ""
+
+#: includes/WP_VBX_Admin.php:123
+msgid "Enter your settings below:"
+msgstr ""
+
+#: includes/WP_VBX_Admin.php:127
+msgid "Import Numbers from Twilio"
+msgstr ""
+
+#: includes/WP_VBX_Admin.php:159
+msgid "WP VBX Phone System Settings"
+msgstr ""
+
+#: includes/WP_VBX_Applet.php:131
+msgid "Text to speech"
+msgstr ""
+
+#: includes/WP_VBX_Applet.php:133
+msgid "Man"
+msgstr ""
+
+#: includes/WP_VBX_Applet.php:134
+msgid "Woman"
+msgstr ""
+
+#: includes/WP_VBX_Applet.php:138
+msgid "Wordpress Default"
+msgstr ""
+
+#: includes/WP_VBX_Applet.php:139
+msgid "English US"
+msgstr ""
+
+#: includes/WP_VBX_Applet.php:140
+msgid "English GB"
+msgstr ""
+
+#: includes/WP_VBX_Applet.php:141
+msgid "Spanish"
+msgstr ""
+
+#: includes/WP_VBX_Applet.php:142
+msgid "French"
+msgstr ""
+
+#: includes/WP_VBX_Applet.php:143
+msgid "German"
+msgstr ""
+
+#: includes/WP_VBX_Applet.php:149
+msgid "Play recorded message"
+msgstr ""
+
+#: includes/WP_VBX_Logs.php:14
+msgid "Logs"
+msgstr ""
+
+#: includes/WP_VBX_Logs.php:15
+msgid "Log"
+msgstr ""
+
+#: includes/WP_VBX_Logs.php:48
+msgid "No Logs avaliable."
+msgstr ""
+
+#: includes/WP_VBX_Logs.php:75
+msgid "Time"
+msgstr ""
+
+#: includes/WP_VBX_Logs.php:76
+msgid "From"
+msgstr ""
+
+#: includes/WP_VBX_Logs.php:77
+msgid "To"
+msgstr ""
+
+#: includes/WP_VBX_Logs.php:78
+msgid "Length"
+msgstr ""
+
+#: includes/WP_VBX_Logs.php:79
+msgid "Status"
+msgstr ""
+
+#: includes/WP_VBX_Logs.php:80
+msgid "Direction"
+msgstr ""
+
+#: includes/WP_VBX_Numbers.php:160
+msgid "Search Criteria"
+msgstr ""
+
+#: includes/WP_VBX_Numbers.php:161
+msgid "Ex: 123; LAW; HELP; 332-33**"
+msgstr ""
+
+#: includes/WP_VBX_Numbers.php:169
+msgid "Search"
+msgstr ""
+
+#: includes/WP_VBX_Numbers.php:178
+msgid "Purchase"
+msgstr ""
+
+#: includes/WP_VBX_Numbers.php:199
+msgid "Available"
+msgstr ""
+
+#: includes/WP_VBX_Numbers.php:204
+msgid "Number"
+msgstr ""
+
+#: includes/WP_VBX_Numbers.php:205
+msgid "City/Town"
+msgstr ""
+
+#: includes/WP_VBX_Numbers.php:206
+msgid "State"
+msgstr ""
+
+#: includes/WP_VBX_VoiceMail.php:103
+msgid "From:"
+msgstr ""
+
+#: includes/WP_VBX_VoiceMail.php:104
+msgid "To:"
+msgstr ""
+
+#: includes/WP_VBX_VoiceMail.php:105
+msgid "Location of caller:"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP VBX Phone System"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://roblesterjr.com/wp-vbx"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Wordpress VBX - Powered by Twilio. Provides an internet based phone system "
+"managed right from your wordpress site."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Robert Lester"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://roblesterjr.com"
+msgstr ""
