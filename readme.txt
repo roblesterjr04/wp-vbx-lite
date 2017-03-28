@@ -1,6 +1,6 @@
 === Wordpress VBX Phone System (Lite) ===
 Contributors: roblesterjr
-Tags: phone, twilio, utilities, general
+Tags: phone, twilio, utilities, general, vbx, professional, calls, voicemail, messages, sms, text, text message
 Requires at least: 4.6
 Tested up to: 4.7
 Stable tag: trunk
@@ -53,5 +53,4 @@ The plugin is extendable for developers as well! Developers can create plugins t
 
 == Changelog ==
 
-= 1.0 =
-* Version 1.0
+1.0 Added error control to activation for when credentials don't exist

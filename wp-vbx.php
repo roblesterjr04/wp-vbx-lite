@@ -4,7 +4,7 @@
 Plugin Name: WP VBX Phone System
 Plugin URI: https://roblesterjr.com/wp-vbx
 Description: Wordpress VBX - Powered by Twilio. Provides an internet based phone system managed right from your wordpress site.
-Version: 0.3
+Version: 1.0
 Author: Robert Lester
 Author URI: https://roblesterjr.com
 License: GPLv2 or later

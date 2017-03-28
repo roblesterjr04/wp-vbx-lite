@@ -60,9 +60,15 @@ class WPRLVBX {
 		if (isset($options['twilio_sid']) && isset($options['twilio_secret'])
 				&& $options['twilio_sid'] != '' && $options['twilio_secret'] != '') {
 		
-			$client = new Client($options['twilio_sid'], $options['twilio_secret']);
-	
-			$this->type = $client->accounts($options['twilio_sid'])->fetch()->type;
+			try {
+				$client = new Client($options['twilio_sid'], $options['twilio_secret']);
+				$this->type = $client->accounts($options['twilio_sid'])->fetch()->type;
+			} catch (Exception $e) {
+				add_action('admin_notices', array($this, 'activate_twilio_notice'));
+				return false;
+			}
+			
+			
 			if ($this->type == 'Trial') {
 				add_action('admin_notices', array($this, 'trial_mode'));
 			}
