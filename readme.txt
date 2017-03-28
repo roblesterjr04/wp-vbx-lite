@@ -53,4 +53,8 @@ The plugin is extendable for developers as well! Developers can create plugins t
 
 == Changelog ==
 
-1.0 Added error control to activation for when credentials don't exist
+=== Version 1.1 ===
+Added get started page and fixed error in number search.
+
+=== Version 1.0 ===
+Added error control to activation for when credentials don't exist.
