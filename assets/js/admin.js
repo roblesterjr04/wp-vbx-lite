@@ -70,6 +70,12 @@ jQuery(function($) {
 			$('.search-results').show().html(data);
 			$('.vbx-search').text('Search');
 			$('.vbx-search').prop('disabled', false);
+		}).fail(function(data) {
+			alert('An error has occured. Please try again.');
+			console.log(data);
+			$('.vbx-search').text('Search');
+			$('.vbx-search').prop('disabled', false);
+			$('.search-results').hide();
 		});
 		
 	});

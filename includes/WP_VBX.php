@@ -35,6 +35,9 @@ class WPRLVBX {
 		add_action('init', array($this, 'init'));
 		add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
 		
+		add_action('admin_head-post.php', array($this, 'hide_publishing_actions'));
+		add_action('admin_head-post-new.php', array($this, 'hide_publishing_actions'));
+		
 		add_action('admin_head', array($this, 'admin_head'));
 		
 		add_filter('post_type_link', array($this, 'filter_link'), 10, 2);
@@ -314,6 +317,24 @@ class WPRLVBX {
 	    do_action( 'wp-vbx-get-applets', $extends );
 	    return $extends;
 	}
+	
+	public function hide_publishing_actions() {
+        $my_post_type = array(
+        	'wp-vbx-numbers',
+        	'wp-vbx-messages'
+        );
+        global $post;
+        if(in_array($post->post_type, $my_post_type)) {
+        echo '
+            <style type="text/css">
+                #misc-publishing-actions,
+                #minor-publishing-actions{
+                    display:none;
+                }
+            </style>
+        ';
+    }
+}
 	
 }
 new WPRLVBX;

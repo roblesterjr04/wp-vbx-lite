@@ -176,6 +176,7 @@ class WPRLVBX_Admin {
 	
 	public function get_started() {
 		
+		$this->options = get_option( 'wp-vbx-twilio-keys' );
 		?>
 		<style>
 			ol.get-started {
@@ -189,12 +190,14 @@ class WPRLVBX_Admin {
 			<h1><?php _e('Getting Started with Wordpress VBX', WPRLVBX_TD) ?></h1>
 		
 			<h2>Get Started Now</h2>
+			<?php if (!isset($this->options['twilio_sid'])) : ?>
 			<ol class="get-started">
 				<li>Sign up for free at Twilio.com. <a href="https://www.twilio.com/try-twilio" target="_blank">Click Here...</a></li>
 				<li>Enter your account ID and secret key below</li>
 				<li>Create your first call flow</li>
 				<li>Buy a number</li>
 			</ol>
+			
 			<form method="post" action="options.php">
 				
 				<?php settings_fields( WPRLVBX_S ); ?>
@@ -204,6 +207,7 @@ class WPRLVBX_Admin {
 				<?php submit_button(); ?>
 				
 			</form>
+			<?php endif ?>
 			<hr>
 			<h2>How to create a call flow</h2>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/sqX7PjGJ7aw" frameborder="0" allowfullscreen></iframe>

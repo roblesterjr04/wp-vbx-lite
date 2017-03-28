@@ -187,13 +187,19 @@ class WPRLVBX_Numbers {
 		
 		$client = twilio();
 		
-		$numbers = $client->availablePhoneNumbers('US')->local->read(
-		    array("contains" => $search, 'inRegion'=>$state)
-		);
-		
+		try {
+			$numbers = $client->availablePhoneNumbers('US')->local->read(
+			    array("contains" => $search, 'inRegion'=>$state)
+			);
+		} catch(Exception $e) {
+			$numbers = array();
+		}
+				
 		$numbers = apply_filters( 'wp-vbx-available-numbers-results', $numbers, $search, $state, $client );
 		
 		ob_start();
+		
+		if (count($numbers)) :
 		
 		?>
 		<h3><?php echo count($numbers) ?> <?php _e('Available', WPRLVBX_TD) ?></h3>
@@ -219,6 +225,12 @@ class WPRLVBX_Numbers {
 		</table>
 		
 		<?php
+		
+		else :
+		
+		?><h3>No numbers found with that criteria.</h3><?php
+		
+		endif;
 			
 		do_action( 'wp-vbx-available-numbers-search' );
 			
