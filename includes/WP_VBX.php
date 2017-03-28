@@ -75,6 +75,7 @@ class WPRLVBX {
 			
 			return $client;
 		} else {
+			add_action('admin_notices', array($this, 'signup_twilio_notice'));
 			add_action('admin_notices', array($this, 'activate_twilio_notice'));
 			return false;
 		}
@@ -91,8 +92,18 @@ class WPRLVBX {
 	public function activate_twilio_notice() {
 		
 		?>
-	    <div class="notice notice-error">
+	    <div class="notice notice-error notice-large">
 	        <p><?php _e( 'Twilio is not activated. Please go to the settings page and update your API keys.', WPRLVBX_TD ); ?></p>
+	    </div>
+	    <?php
+		
+	}
+	
+	public function signup_twilio_notice() {
+		
+		?>
+	    <div class="notice notice-warning notice-large">
+	        <p><?php _e( 'Sign Up with Twilio! <a target="_blank" href="https://www.twilio.com/try-twilio">Click Here...</a>', WPRLVBX_TD ); ?></p>
 	    </div>
 	    <?php
 		
@@ -101,7 +112,7 @@ class WPRLVBX {
 	public function trial_mode() {
 		
 		?>
-	    <div class="notice notice-error">
+	    <div class="notice notice-error notice-large">
 	        <p><?php _e( 'Twilio account is in trial mode. You must upgrade to a full account for the plugin to work.', WPRLVBX_TD ); ?></p>
 	    </div>
 	    <?php

@@ -124,7 +124,7 @@ class WPRLVBX_Admin {
 	}
 	
 	public function twilio_import_numbers() {
-		echo '<label><input type="checkbox" id="twilio_import" name="wp-vbx-twilio-keys[twilio_import]" value="1" /> '.__('Import Numbers from Twilio', WPRLVBX_TD).'</label>';
+		echo '<label><input type="checkbox" id="twilio_import" name="wp-vbx-twilio-keys[twilio_import]" value="1" /> '.__('Import Numbers from Twilio', WPRLVBX_TD).'</label><p class="description">This is for users who already own numbers through Twilio.</p>';
 	}
 	
 	public function twilio_sid_callback()
@@ -147,6 +147,7 @@ class WPRLVBX_Admin {
 		
 		add_menu_page( 'Phone System', 'Phone System', 'read', 'phone-system', null, 'dashicons-phone', 20);
 		add_submenu_page( 'phone-system', 'Phone System Settings', 'Settings', 'manage_options', 'phone-system-settings', array($this, 'admin_page'));
+		add_submenu_page( 'phone-system', 'Get Started', 'Get Started', 'manage_options', 'vbx-get-started', array($this, 'get_started'));
 
 	}
 	
@@ -168,6 +169,44 @@ class WPRLVBX_Admin {
 				
 			</form>
 		
+		</div>
+		<?php
+		
+	}
+	
+	public function get_started() {
+		
+		?>
+		<style>
+			ol.get-started {
+				font-size: 24px;
+			}	
+			ol.get-started li {
+				padding: 10px 25px;
+			}
+		</style>
+		<div class="wrap">
+			<h1><?php _e('Getting Started with Wordpress VBX', WPRLVBX_TD) ?></h1>
+		
+			<h2>Get Started Now</h2>
+			<ol class="get-started">
+				<li>Sign up for free at Twilio.com. <a href="https://www.twilio.com/try-twilio" target="_blank">Click Here...</a></li>
+				<li>Enter your account ID and secret key below</li>
+				<li>Create your first call flow</li>
+				<li>Buy a number</li>
+			</ol>
+			<form method="post" action="options.php">
+				
+				<?php settings_fields( WPRLVBX_S ); ?>
+				
+				<?php do_settings_sections( 'phone-system-settings' ); ?>
+				
+				<?php submit_button(); ?>
+				
+			</form>
+			<hr>
+			<h2>How to create a call flow</h2>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/sqX7PjGJ7aw" frameborder="0" allowfullscreen></iframe>
 		</div>
 		<?php
 		
