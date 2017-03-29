@@ -10,11 +10,21 @@ class WPRLVBX_Numbers {
 		add_filter('gettext', array($this, 'publish_button_text'), 10, 2);
 		add_action('wp_ajax_search_numbers', array($this, 'twilio_number_search'));
 		add_action('save_post', array($this, 'save_number'));
-		//add_action('before_delete_post', array($this, 'delete_number'));
 		add_filter('post_row_actions',array($this, 'release_action_link'), 10, 2);
 		add_filter('the_title', array($this, 'the_title'), 10, 2);
 		add_action('admin_init', array($this, 'release_number'));
+		add_filter('post_updated_messages', array($this, 'post_messages'));
 		
+	}
+	
+	public function post_messages($messages) {
+		
+		global $post, $post_ID;
+		
+		$messages['wp-vbx-numbers'][6] = 'Number Purchased';
+		$messages['wp-vbx-numbers'][1] = 'Number Updated';
+		
+		return $messages;
 	}
 	
 	public function the_title($title, $post) {

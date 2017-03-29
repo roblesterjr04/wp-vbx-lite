@@ -53,6 +53,9 @@ The plugin is extendable for developers as well! Developers can create plugins t
 
 == Changelog ==
 
+=== Version 1.2 ===
+Updated notices for number admin screen. Added more videos to Get Started page.
+
 === Version 1.1 ===
 Added get started page and fixed error in number search.
 

@@ -185,12 +185,18 @@ class WPRLVBX_Admin {
 			ol.get-started li {
 				padding: 10px 25px;
 			}
+			ul.get-started {
+				padding-left: 20px;
+			}
+			ul.get-started li {
+				list-style-type: disc;
+			}
 		</style>
 		<div class="wrap">
 			<h1><?php _e('Getting Started with Wordpress VBX', WPRLVBX_TD) ?></h1>
 		
-			<h2>Get Started Now</h2>
 			<?php if (!isset($this->options['twilio_sid'])) : ?>
+			<h2>Get Started Now</h2>
 			<ol class="get-started">
 				<li>Sign up for free at Twilio.com. <a href="https://www.twilio.com/try-twilio" target="_blank">Click Here...</a></li>
 				<li>Enter your account ID and secret key below</li>
@@ -208,9 +214,23 @@ class WPRLVBX_Admin {
 				
 			</form>
 			<?php endif ?>
+			<h1>Get the Pro Pack!</h1>
+			<ul class="get-started">
+				<li>All Lite Features +</li>
+				<li>Sms Inbox + reply</li>
+				<li>Transfer</li>
+				<li>Conference Calling</li>
+				<li>Timed attendant</li>
+				<li>Hold Queue</li>
+				<li>Conditional Staff Flow</li>
+				<li>Call in voicemail</li>
+				<li>Language Prompt</li>
+			</ul>
+			<h2><a target="_blank" href="https://roblesterjr.com/wp-vbx">Learn More Here!</a></h2>
 			<hr>
-			<h2>How to create a call flow</h2>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/sqX7PjGJ7aw" frameborder="0" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/RsrRA1AD8LE" frameborder="0" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/qYxzR3s3H54" frameborder="0" allowfullscreen></iframe>
 		</div>
 		<?php
 		
