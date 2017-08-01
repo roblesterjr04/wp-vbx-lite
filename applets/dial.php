@@ -106,9 +106,10 @@ class WPRLVBX_Applet_Dial extends WPRLVBX_Applet {
 					break;
 				}
 			
-			$dial_stack = array_unique($dial_stack);
+			$dial_stack = apply_filters('wp-vbx-dial-numbers', array_unique($dial_stack), $this);
+			$opts = apply_filters('wp-vbx-dial-twiml-arguments', array('action'=>$this->action), $this);
 			
-			$dial = $this->twiml->Dial(array('action'=>$this->action));
+			$dial = $this->twiml->Dial($opts);
 			foreach($dial_stack as $n) {
 				$dial->Number($n);
 			}
