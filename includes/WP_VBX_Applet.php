@@ -298,7 +298,7 @@ abstract class WPRLVBX_Applet {
 	 * @return void
 	 */
 	final public function value($field) {
-		$value = isset($this->instance[$field]) ? $this->instance[$field] : '';
+		$value = apply_filters('wp-vbx-applet-value', isset($this->instance[$field]) ? $this->instance[$field] : '', $field);
 		return $value;
 	}
 	
@@ -398,7 +398,7 @@ abstract class WPRLVBX_Applet {
 	 * @return void
 	 */
 	final public function request($key) {
-		if (isset($this->request[$key])) return $this->request[$key];
+		if (isset($this->request[$key])) return apply_filters('wp-vbx-applet-request', $this->request[$key], $key);
 		return false;
 	}
 	
