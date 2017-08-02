@@ -113,7 +113,7 @@ abstract class WPRLVBX_Applet {
 			
 	}
 	
-	final protected function prompt_message($name = '') {
+	final public function prompt_message($name = '') {
 		
 		ob_start();
 		
@@ -157,7 +157,7 @@ abstract class WPRLVBX_Applet {
 		
 	}
 	
-	final protected function media_picker($name, $title = 'Select Media', $type = array('image')) {
+	final public function media_picker($name, $title = 'Select Media', $type = array('image')) {
 		
 		$seltype = $this->value($name . '_mime');
 		
@@ -175,7 +175,7 @@ abstract class WPRLVBX_Applet {
 		
 	}
 	
-	final protected function prompt_output($name = '', $twiml = false, $default = false) {
+	final public function prompt_output($name = '', $twiml = false, $default = false) {
 		
 		$language_supported = array('en', 'en_GB', 'es', 'fr', 'de');
 		
