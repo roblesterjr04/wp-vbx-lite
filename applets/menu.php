@@ -79,7 +79,8 @@ class WPRLVBX_Applet_Menu extends WPRLVBX_Applet {
 			$this->response();
 			
 		} else {
-			$gather = $this->twiml->Gather(array('timeout'=>$timeout ?: 5));
+			$args = apply_filters('wp-vbx-menu-gather-arguments', array('timeout'=>$timeout ?: 5), $this);
+			$gather = $this->twiml->Gather($args);
 			$this->prompt_output('greeting', $gather);
 			$this->run();
 		}
