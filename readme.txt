@@ -53,6 +53,9 @@ The plugin is extendable for developers as well! Developers can create plugins t
 
 == Changelog ==
 
+=== Version 1.2.2 ===
+Exposed some applet functions for extendability
+
 === Version 1.2.1 ===
 Added more action and filter hooks.
 
