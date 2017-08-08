@@ -213,7 +213,7 @@ abstract class WPRLVBX_Applet {
 	 * @param mixed $sel
 	 * @return void
 	 */
-	final protected function selected($val, $sel) {
+	final public function selected($val, $sel) {
 		if ($val == $sel) echo 'selected';
 		else echo '';
 	}
@@ -226,7 +226,7 @@ abstract class WPRLVBX_Applet {
 	 * @param mixed $sel
 	 * @return void
 	 */
-	final protected function checked($val, $sel) {
+	final public function checked($val, $sel) {
 		if ($val == $sel) echo 'checked';
 		else echo '';
 	}
@@ -346,7 +346,7 @@ abstract class WPRLVBX_Applet {
 	 * @param bool $echo (default: true)
 	 * @return void
 	 */
-	protected function field_name($field, $echo = true) {
+	final public function field_name($field, $echo = true) {
 		$name = "flow[{$this->index}][$field]";
 		if (!$echo) return $name;
 		else echo $name;
@@ -360,7 +360,7 @@ abstract class WPRLVBX_Applet {
 	 * @param mixed $name
 	 * @return void
 	 */
-	final protected function run($name = 'next') {
+	final public function run($name = 'next') {
 		
 		do_action( 'wp-vbx-applet-run', $name, $this );
 		
