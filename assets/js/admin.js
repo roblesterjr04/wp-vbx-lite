@@ -126,11 +126,11 @@ jQuery(function($) {
 	
 	$('body').on('click', '.menu_option_controls a.add', function(event) {
 		event.preventDefault();
-		var index = $('.vbx-menu-options label').last().attr('data-index');
+		var index = $(this).parents('.applet-content').find('.vbx-menu-options label').last().attr('data-index');
 		index++;
 		var flowindex = jQuery(this).parents('.applet-content').find('span.index').text();
 		flowindex--;
-		$('.vbx-menu-options label').last().after('<label data-index="'+index+'">Keys: <input name="flow['+parseInt(flowindex)+'][menu_options]['+index+']" value="" type="text"><div class="dropzone" data-index="'+parseInt(flowindex)+'"><input class="drop" type="hidden" name="flow['+parseInt(flowindex)+'][menu_option_'+index+']" value=""><div class="flow ui-droppable" style=""></div><div class="backdrop"><p>Drop Applet Here</p></div></div><div class="menu_option_controls"><a href="#" class="remove"><span class="dashicons dashicons-minus"></span></a><a href="#" class="add"><span class="dashicons dashicons-plus"></span></a></div></label>');
+		$(this).parents('.applet-content').find('.vbx-menu-options label').last().after('<label data-index="'+index+'">Keys: <input name="flow['+parseInt(flowindex)+'][menu_options]['+index+']" value="" type="text"><div class="dropzone" data-index="'+parseInt(flowindex)+'"><input class="drop" type="hidden" name="flow['+parseInt(flowindex)+'][menu_option_'+index+']" value=""><div class="flow ui-droppable" style=""></div><div class="backdrop"><p>Drop Applet Here</p></div></div><div class="menu_option_controls"><a href="#" class="remove"><span class="dashicons dashicons-minus"></span></a><a href="#" class="add"><span class="dashicons dashicons-plus"></span></a></div></label>');
 		$('.vbx-menu-options label[data-index="'+index+'"]').find('.flow').droppable(dropArgs);
 	});
 

@@ -2,7 +2,7 @@
 Contributors: roblesterjr
 Tags: phone, twilio, utilities, general, vbx, professional, calls, voicemail, messages, sms, text, text message
 Requires at least: 4.6
-Tested up to: 4.7
+Tested up to: 4.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -52,6 +52,9 @@ The plugin is extendable for developers as well! Developers can create plugins t
 4. The menus.
 
 == Changelog ==
+
+=== Version 1.2.3 ===
+Fixes a bug with nested menus
 
 === Version 1.2.2 ===
 Exposed some applet functions for extendability
