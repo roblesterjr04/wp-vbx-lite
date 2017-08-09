@@ -75,8 +75,10 @@ class WPRLVBX_Applet_Dial extends WPRLVBX_Applet {
 		$dial_stack = array();
 		
 		if ($status == 'no-answer' || $status == 'busy') {
+			do_action('wp-vbx-dial-ended', $this);
 			$this->run('no-answer');
 		} else if ($status == 'completed') {
+			do_action('wp-vbx-dial-completed', $this);
 			$this->run('call-ended');
 		} else {
 			
