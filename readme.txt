@@ -53,6 +53,9 @@ The plugin is extendable for developers as well! Developers can create plugins t
 
 == Changelog ==
 
+=== Version 1.2.4 ===
+Added action hooks to call completion operations in dial applet.
+
 === Version 1.2.3 ===
 Fixes a bug with nested menus
 
