@@ -53,6 +53,10 @@ function twilio() {
 	return WPRLVBX::$client;
 }
 
+function twiml() {
+	return WPRLVBX::$twiml;
+}
+
 function vbx_plugin_activate( $plugin ) {
 	
 	if ($plugin != plugin_basename( __FILE__ )) return;
