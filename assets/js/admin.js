@@ -144,9 +144,14 @@ function update_conversation() {
 		postid: postid
 	}, function(data) {
 		
-		jQuery(data).find('img').on('load', function() {
+		if (data == jQuery('#conversation .inside .message-thread').html()) return null;
+		if (jQuery(data).find('img').length) {
+			jQuery(data).find('img').on('load', function() {
+				jQuery('#conversation .inside .message-thread').html(data);
+			});		
+		} else {
 			jQuery('#conversation .inside .message-thread').html(data);
-		});		
+		}
 		
 	});
 	
