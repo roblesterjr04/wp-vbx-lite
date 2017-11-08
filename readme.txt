@@ -53,6 +53,9 @@ The plugin is extendable for developers as well! Developers can create plugins t
 
 == Changelog ==
 
+=== Version 1.2.5 ===
+Removed the logs panel. It was redundant since logs can be found in Twilio, and also it has somehow broken as a result of some API changes. Until it can be fixed, logs have been removed.
+
 === Version 1.2.4 ===
 Added action hooks to call completion operations in dial applet.
 
