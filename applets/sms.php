@@ -26,8 +26,17 @@ class WPRLVBX_Applet_Sms extends WPRLVBX_Applet {
 
 		if ($sms || $media) {
 			if ($this->request('CallSid')) {
-				$this->twiml->Sms($sms);
+				
+				$number = $this->request('From');
+				$message = [
+					'from' => $this->request('To'),
+					'body' => $sms
+				];
+				if ($media) $message['mediaUrl'] = $media;
+				$client = twilio();
+				$client->messages->create($number, $message);
 				$this->run();
+				
 			} else if ($this->request('MessageSid')) {
 				$message = $this->twiml->Message();
 				if ($sms) {
