@@ -27,7 +27,7 @@ class WPRLVBX_Numbers {
 		return $messages;
 	}
 	
-	public function the_title($title, $post) {
+	public function the_title($title, $post = null) {
 		
 		$number = get_post_meta( $post, '_twilio_display_number', true );
 		return $number ?: $title;

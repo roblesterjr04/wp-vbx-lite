@@ -53,6 +53,9 @@ The plugin is extendable for developers as well! Developers can create plugins t
 
 == Changelog ==
 
+=== Version 1.2.7 ===
+Fixed a bug related to missing post parameter on "the_title" filters.
+
 === Version 1.2.6 ===
 Fixed a bug in the SMS applet where media messages wouldn't be sent.
 
